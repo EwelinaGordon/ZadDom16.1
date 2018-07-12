@@ -1,6 +1,8 @@
 package pl.javastart;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class SterownikGlosnika implements Sterownik {
 
     public void action(DanePogodowe danePogodowe) {

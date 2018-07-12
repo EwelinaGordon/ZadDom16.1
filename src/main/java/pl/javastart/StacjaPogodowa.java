@@ -1,6 +1,9 @@
 package pl.javastart;
+import org.springframework.stereotype.Component;
+
 import java.util.Random;
 
+@Component
 public class StacjaPogodowa implements InfoProvider {
 
     private Random random;

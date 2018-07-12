@@ -1,8 +1,9 @@
 package pl.javastart;
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class SterownikRolet implements Sterownik {
-
 
     public void action(DanePogodowe danePogodowe) {
         boolean isSunny = danePogodowe.isSunny();

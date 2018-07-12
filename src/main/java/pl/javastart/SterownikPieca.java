@@ -1,7 +1,9 @@
 package pl.javastart;
 
 
+import org.springframework.stereotype.Component;
 
+@Component
 public class SterownikPieca implements Sterownik {
 
     public void action(DanePogodowe danePogodowe) {

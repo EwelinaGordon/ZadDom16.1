@@ -1,15 +1,21 @@
 package pl.javastart;
 
+import org.springframework.stereotype.Component;
 
-import java.util.Random;
-
-
+@Component
 public class SmartHome {
 
-    InfoProvider stacjaPogodowa = new StacjaPogodowa(new Random());
-    public Sterownik sterownikGlosnika = new SterownikGlosnika();
-    public Sterownik sterownikPieca = new SterownikPieca();
-    public Sterownik sterownikRolet = new SterownikRolet();
+    private InfoProvider stacjaPogodowa;
+    private Sterownik sterownikGlosnika;
+    private Sterownik sterownikPieca;
+    private Sterownik sterownikRolet;
+
+    public SmartHome(InfoProvider stacjaPogodowa, Sterownik sterownikGlosnika, Sterownik sterownikPieca, Sterownik sterownikRolet) {
+        this.stacjaPogodowa = stacjaPogodowa;
+        this.sterownikGlosnika = sterownikGlosnika;
+        this.sterownikPieca = sterownikPieca;
+        this.sterownikRolet = sterownikRolet;
+    }
 
     public void uruchomSterowniki(){
         DanePogodowe danePogodowe = stacjaPogodowa.pobierzDane();
